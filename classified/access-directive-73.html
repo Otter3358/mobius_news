@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Директива доступа 73 | G.U.N.</title>
+    <link rel="stylesheet" href="../css/main.css" />
+    <script defer src="../js/admin-auth.js"></script>
+  </head>
+  <body class="gazette-body">
+    <div class="paper-shell admin-shell">
+      <header class="site-header">
+        <div class="seal">G.U.N.</div>
+        <div class="masthead">
+          <p class="eyebrow">Служебный раздел</p>
+          <h1>Протокол авторизации администраторов</h1>
+          <p class="meta-line">Доступ только для уполномоченных лиц.</p>
+        </div>
+      </header>
+
+      <section class="admin-card">
+        <form class="admin-form" data-admin-login-form>
+          <label>
+            Логин
+            <input type="text" name="username" autocomplete="username" required />
+          </label>
+          <label>
+            Пароль
+            <input type="password" name="password" autocomplete="current-password" required />
+          </label>
+          <div class="btn-row">
+            <button class="btn" type="submit">Подтвердить доступ</button>
+            <a class="btn secondary" href="../index.html">Вернуться к бюллетеню</a>
+          </div>
+          <p class="status-msg" data-auth-message></p>
+        </form>
+      </section>
+    </div>
+  </body>
+</html>
