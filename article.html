@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Mobius Newswire | Публикация</title>
+    <meta
+      name="description"
+      content="Полный текст публикации Mobius Newswire и оперативные материалы по теме."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700;900&family=Source+Sans+3:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <script src="assets/js/store.js" defer></script>
+    <script src="assets/js/article.js" defer></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="header-band">
+        <p class="header-band-label">Оперативная хроника</p>
+        <p id="today-date" class="header-band-date"></p>
+      </div>
+      <div class="masthead">
+        <p class="masthead-kicker">G.U.N. Press Bureau</p>
+        <h1>Mobius Newswire</h1>
+        <p class="masthead-subtitle">Полный материал редакции</p>
+      </div>
+    </header>
+
+    <main class="article-page">
+      <p class="article-backline">
+        <a id="back-to-news" class="story-read-more" href="index.html">К вкладкам новостей</a>
+      </p>
+
+      <article id="article-content" class="article-panel" aria-live="polite"></article>
+
+      <section class="panel panel-feed article-related">
+        <div class="panel-heading">
+          <h2>Еще по теме</h2>
+          <p>Оперативные публикации</p>
+        </div>
+        <div id="related-stories" class="story-grid"></div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>Mobius Newswire Desk</p>
+      <p>Официальная новостная редакция, центральный выпуск</p>
+    </footer>
+  </body>
+</html>
