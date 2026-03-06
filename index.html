@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Mobius Newswire</title>
+    <meta
+      name="description"
+      content="Оперативная новостная лента Мобиуса: сводки, расследования и официальные отчеты."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700;900&family=Source+Sans+3:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <script src="assets/js/store.js" defer></script>
+    <script src="assets/js/main.js" defer></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="header-band">
+        <p class="header-band-label">Оперативная хроника</p>
+        <p id="today-date" class="header-band-date"></p>
+      </div>
+      <div class="masthead">
+        <p class="masthead-kicker">G.U.N. Press Bureau</p>
+        <h1>Mobius Newswire</h1>
+        <p class="masthead-subtitle">
+          Главная редакция: срочные сводки, региональные отчеты и подтвержденные
+          данные от полевых подразделений.
+        </p>
+      </div>
+      <nav class="main-nav" aria-label="Разделы">
+        <ul>
+          <li><a href="#top-story">Главное</a></li>
+          <li><a href="#latest-updates">Срочно</a></li>
+          <li><a href="#news-feed">Лента</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="page">
+      <section id="top-story" class="panel panel-main" aria-live="polite"></section>
+
+      <section id="latest-updates" class="panel panel-sidebar">
+        <h2>Последние бюллетени</h2>
+        <ul id="latest-list" class="latest-list"></ul>
+      </section>
+
+      <section id="news-feed" class="panel panel-feed">
+        <div class="panel-heading">
+          <h2>Лента новостей</h2>
+          <p>Только подтвержденные публикации</p>
+        </div>
+        <div id="all-stories" class="story-grid" aria-live="polite"></div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>Mobius Newswire Desk</p>
+      <p>Официальная новостная редакция, центральный выпуск</p>
+    </footer>
+  </body>
+</html>
