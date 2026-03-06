@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Административный реестр | G.U.N.</title>
+    <link rel="stylesheet" href="../css/main.css" />
+    <script defer src="../js/admin-auth.js"></script>
+    <script defer src="../js/news-store.js"></script>
+    <script defer src="../js/admin-news.js"></script>
+  </head>
+  <body class="gazette-body">
+    <div class="paper-shell">
+      <header class="site-header">
+        <div class="seal">G.U.N.</div>
+        <div class="masthead">
+          <p class="eyebrow">Защищённый контур</p>
+          <h1>Административный кабинет редакции</h1>
+          <p class="meta-line">
+            Авторизован как: <strong data-admin-user>—</strong> | Вход выполнен:
+            <strong data-admin-auth-date>—</strong>
+          </p>
+        </div>
+      </header>
+
+      <main class="section-block" data-admin-dashboard data-news-admin-app>
+        <h2>Раздел служебного контроля новостей</h2>
+        <div class="news-admin-layout">
+          <section class="panel-card">
+            <h3 data-form-title>Публикация нового материала</h3>
+            <form class="news-form" data-news-form>
+              <input type="hidden" name="news_id" />
+              <label>
+                Заголовок новости
+                <input type="text" name="title" maxlength="140" required />
+              </label>
+              <label>
+                Локация / сектор
+                <input type="text" name="location" maxlength="80" required />
+              </label>
+              <label>
+                Номер постановления
+                <input type="text" name="ordinance" maxlength="32" placeholder="Напр. 04-СС" required />
+              </label>
+              <label>
+                Дата и время публикации
+                <input type="datetime-local" name="published_at" required />
+              </label>
+              <label>
+                Содержание
+                <textarea name="summary" rows="5" maxlength="900" required></textarea>
+              </label>
+              <div class="btn-row">
+                <button class="btn" type="submit">Сохранить новость</button>
+                <button class="btn secondary" data-news-reset type="button">Сбросить форму</button>
+              </div>
+              <p class="status-msg" data-news-message></p>
+            </form>
+          </section>
+          <section class="panel-card">
+            <div class="section-heading">
+              <h3>Реестр опубликованных материалов</h3>
+              <span class="chip" data-news-admin-count>0</span>
+            </div>
+            <div class="news-admin-list" data-news-list></div>
+          </section>
+        </div>
+
+        <div class="btn-row" style="margin-top: 1rem">
+          <button class="btn" data-admin-logout type="button">Завершить сессию</button>
+          <a class="btn secondary" href="../index.html">К публичной странице</a>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>
